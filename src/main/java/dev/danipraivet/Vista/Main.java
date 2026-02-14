@@ -5,11 +5,11 @@ import com.formdev.flatlaf.FlatDarculaLaf;
 import javax.swing.*;
 
 /**
- * Clase principal
+ * Clase principal — arranca el gestor de Brawlhalla
  */
 public class Main {
     /**
-     * Aplicamos un nuevo look and feel y abrimos la pestaña de login
+     * Aplica el look and feel y abre la ventana de login
      * @param args argumentos adicionales
      */
     public static void main(String[] args) {
@@ -18,6 +18,6 @@ public class Main {
         } catch (Exception e) {
             e.printStackTrace();
         }
-            new VentanaLogin().setVisible(true);
+        SwingUtilities.invokeLater(() -> new VentanaLogin().setVisible(true));
     }
 }

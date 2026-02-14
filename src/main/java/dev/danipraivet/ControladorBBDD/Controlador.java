@@ -1,115 +1,86 @@
 package dev.danipraivet.ControladorBBDD;
 
-import instituto.Modelo.Alumno;
-import instituto.Modelo.Asignatura;
-import instituto.Modelo.Matricula;
-import instituto.Modelo.ConexionDAOInstituto;
+import dev.danipraivet.Modelo.Arma;
+import dev.danipraivet.Modelo.Leyenda;
+import dev.danipraivet.Modelo.ConexionDAOBrawlhalla;
 
-import java.util.Comparator;
 import java.util.List;
 
 /**
- * Clase intermediaria que procesa los datos obtenidos en ConexionDAOInstituto
+ * Clase intermediaria que procesa los datos obtenidos en ConexionDAOBrawlhalla
  */
 public class Controlador {
 
-    // ALUMNOS
+    // ─────────────────────────────────────────────
+    //  LEYENDAS
+    // ─────────────────────────────────────────────
 
     /**
-     * Obtener la lista de alumnos de la base de datos
-     * @return retorna la lista de los alumnos
+     * Obtiene la lista completa de leyendas
+     * @return lista de leyendas
      */
-    public List<Alumno> obtenerAlumnos() {
+    public List<Leyenda> obtenerLeyendas() {
         try {
-            return ConexionDAOInstituto.obtenerAlumnos();
+            return ConexionDAOBrawlhalla.obtenerLeyendas();
         } catch (Exception e) {
-            System.err.println("Error al obtener alumnos: " + e.getMessage());
-            return List.of(); // Devolver lista vacía en lugar de null
+            System.err.println("Error al obtener leyendas: " + e.getMessage());
+            return List.of();
         }
     }
 
     /**
-     * Insertar un nuevo alumno en la base de datos
-     * @param a Alumno a insertar
-     * @return verdadero o falso dependiendo del éxito del procedimiento o fracaso
+     * Inserta una nueva leyenda en la base de datos
+     * @param l leyenda a insertar
+     * @return true si se insertó correctamente
      */
-    public boolean agregarAlumno(Alumno a) {
-        if (a == null) {
-            System.out.println("Error: Alumno nulo");
+    public boolean agregarLeyenda(Leyenda l) {
+        if (l == null) {
+            System.out.println("Error: Leyenda nula");
             return false;
         }
-        if (a.getNombre() == null || a.getNombre().trim().isEmpty()) {
-            System.out.println("Error: Nombre de alumno inválido");
+        if (l.getNombre() == null || l.getNombre().trim().isEmpty()) {
+            System.out.println("Error: Nombre de leyenda inválido");
             return false;
         }
-        return ConexionDAOInstituto.insertarAlumno(a);
+        return ConexionDAOBrawlhalla.insertarLeyenda(l);
     }
 
     /**
-     * Eliminar un alumno de la base de datos
-     * @param idAlumno id del alumno a eliminar
-     * @return verdadero o falso dependiendo del éxito del procedimiento o fracaso
+     * Elimina una leyenda por su id
+     * @param idLeyenda id de la leyenda a eliminar
+     * @return true si se eliminó correctamente
      */
-    public boolean eliminarAlumno(int idAlumno) {
-        return ConexionDAOInstituto.eliminarAlumno(idAlumno);
+    public boolean eliminarLeyenda(int idLeyenda) {
+        return ConexionDAOBrawlhalla.eliminarLeyenda(idLeyenda);
     }
 
-    // ASIGNATURAS
+    // ─────────────────────────────────────────────
+    //  ARMAS
+    // ─────────────────────────────────────────────
 
     /**
-     * Obtener la lista de asignaturas de la base de datos
-     * @return la lista de las asignaturas
+     * Obtiene la lista completa de armas
+     * @return lista de armas
      */
-    public List<Asignatura> obtenerAsignaturas() {
-        return ConexionDAOInstituto.obtenerAsignaturas();
-    }
-
-    /**
-     * Inserta una asignatura a la base de datos
-     * @param a asignatura a agregar
-     * @return verdadero o falso dependiendo del éxito del procedimiento o fracaso
-     */
-    public boolean agregarAsignatura(Asignatura a) {
-        return ConexionDAOInstituto.insertarAsignatura(a);
+    public List<Arma> obtenerArmas() {
+        return ConexionDAOBrawlhalla.obtenerArmas();
     }
 
     /**
-     * Eliminar una asignatura de la base de datos
-     * @param idAsignatura id de la asignatura a eliminar
-     * @return verdadero o falso dependiendo del éxito del procedimiento o fracaso
+     * Inserta un arma nueva en la base de datos
+     * @param a arma a insertar
+     * @return true si se insertó correctamente
      */
-    public boolean eliminarAsignatura(int idAsignatura) {
-        return ConexionDAOInstituto.eliminarAsignatura(idAsignatura);
-    }
-
-    // MATRICULAS
-
-    /**
-     * Devuelve una lista de las matrículas que pertenezcan a dicho alumno
-     * @param idAlumno id del alumno
-     * @return lista de las matriculas obtenidas
-     */
-    public List<Matricula> obtenerMatriculasPorAlumno(int idAlumno) {
-        return ConexionDAOInstituto.obtenerMatriculasPorAlumno(idAlumno);
+    public boolean agregarArma(Arma a) {
+        return ConexionDAOBrawlhalla.insertarArma(a);
     }
 
     /**
-     * Insertar una matricula en la base de datos
-     * @param m matricula a agregar
-     * @return verdadero o falso dependiendo del éxito del procedimiento o fracaso
+     * Elimina un arma por su id
+     * @param idArma id del arma a eliminar
+     * @return true si se eliminó correctamente
      */
-    public boolean insertarMatricula(Matricula m) {
-        return ConexionDAOInstituto.insertarMatricula(m);
+    public boolean eliminarArma(int idArma) {
+        return ConexionDAOBrawlhalla.eliminarArma(idArma);
     }
-
-    /**
-     * Eliminar una matricula en la base de datos
-     * @param idAlumno id del alumno perteneciente a la matricula
-     * @param idAsignatura id de la asignatura perteneciente a la matricula
-     * @return verdadero o falso dependiendo del éxito del procedimiento o fracaso
-     */
-    public boolean eliminarMatricula(int idAlumno, int idAsignatura) {
-        return ConexionDAOInstituto.eliminarMatricula(idAlumno, idAsignatura);
-    }
-
 }

@@ -1,6 +1,6 @@
 package dev.danipraivet.Modelo;
 
-import instituto.Vista.VentanaPrincipal;
+import dev.danipraivet.Vista.VentanaPrincipal;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
