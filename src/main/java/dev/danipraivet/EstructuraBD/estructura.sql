@@ -4,18 +4,16 @@ CREATE DATABASE brawlhalla CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci;
 
 USE brawlhalla;
 
--- ============================================================
 --  TABLA: Armas
--- ============================================================
+
 CREATE TABLE armas (
     id            INT UNSIGNED    NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nombre_arma   VARCHAR(50)     NOT NULL
 );
 
--- ============================================================
+
 --  TABLA: Leyendas
---  Cada leyenda tiene exactamente 2 armas (id_arma1, id_arma2)
--- ============================================================
+
 CREATE TABLE leyendas (
     id          INT UNSIGNED    NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nombre      VARCHAR(100)    NOT NULL,
@@ -30,9 +28,8 @@ CREATE TABLE leyendas (
     FOREIGN KEY (id_arma2) REFERENCES armas(id)
 );
 
--- ============================================================
---  TABLA: Usuarios (login)
--- ============================================================
+
+--  TABLA: Usuarios
 CREATE TABLE usuarios (
     id          INT UNSIGNED    NOT NULL AUTO_INCREMENT,
     usuario     VARCHAR(50)     NOT NULL,
@@ -41,9 +38,7 @@ CREATE TABLE usuarios (
     UNIQUE KEY (usuario)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
--- ============================================================
 --  INSERTS: Armas
--- ============================================================
 INSERT INTO armas (nombre_arma) VALUES
     ('Martillo'),
     ('Lanza'),
@@ -59,18 +54,11 @@ INSERT INTO armas (nombre_arma) VALUES
     ('Arco'),
     ('Lanza Cohete');
 
--- ============================================================
---  INSERTS: Leyendas
---  Rayman  → Hacha(10) + Guanteletes(11)
---  Asuri   → Espada(8) + Dagas(9)
---  Vector  → Arco(12) + Lanza Cohete(13)
--- ============================================================
+
 INSERT INTO leyendas (nombre, vida, fuerza, velocidad, destreza, defensa, id_arma1, id_arma2) VALUES
     ('Rayman', 6, 6, 7, 5, 4, 10, 11),
     ('Asuri',  6, 6, 7, 7, 2,  8,  9),
     ('Vector', 6, 3, 8, 7, 4, 12, 13);
 
--- ============================================================
 --  INSERT: Usuario admin
--- ============================================================
 INSERT INTO usuarios VALUES (1, 'admin', 'admin');
