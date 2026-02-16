@@ -1,4 +1,4 @@
-package dev.danipraivet.Util;
+package dev.danipraivet.Modelo;
 
 import java.io.FileWriter;
 import java.io.IOException;

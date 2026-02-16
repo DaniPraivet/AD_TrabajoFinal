@@ -169,8 +169,13 @@ public class VentanaPrincipal extends JFrame {
             return;
         }
         int id = (int) tablaLeyendas.getModel().getValueAt(fila, 0);
+
+        UIManager.put("OptionPane.yesButtonText", "Sí");
+        UIManager.put("OptionPane.noButtonText", "No");
+
         int confirmacion = JOptionPane.showConfirmDialog(this,
                 "¿Seguro que deseas eliminar esta leyenda?", "Confirmar", JOptionPane.YES_NO_OPTION);
+
         if (confirmacion == JOptionPane.YES_OPTION) {
             if (controlador.eliminarLeyenda(id)) {
                 cargarDatosLeyendas();
@@ -187,8 +192,13 @@ public class VentanaPrincipal extends JFrame {
             return;
         }
         int id = (int) tablaArmas.getModel().getValueAt(fila, 0);
+
+        UIManager.put("OptionPane.yesButtonText", "Sí");
+        UIManager.put("OptionPane.noButtonText", "No");
+
         int confirmacion = JOptionPane.showConfirmDialog(this,
                 "¿Seguro que deseas eliminar este arma?\n(Fallará si alguna leyenda la usa)", "Confirmar", JOptionPane.YES_NO_OPTION);
+
         if (confirmacion == JOptionPane.YES_OPTION) {
             if (controlador.eliminarArma(id)) {
                 cargarDatosArmas();

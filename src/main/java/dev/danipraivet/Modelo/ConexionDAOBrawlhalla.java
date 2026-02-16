@@ -1,6 +1,6 @@
 package dev.danipraivet.Modelo;
 
-import dev.danipraivet.Util.Logger;
+import dev.danipraivet.Modelo.*;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
