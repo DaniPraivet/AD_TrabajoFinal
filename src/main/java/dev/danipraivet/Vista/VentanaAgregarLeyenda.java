@@ -51,7 +51,7 @@ public class VentanaAgregarLeyenda extends JFrame {
         // Nombre
         agregarFila(panel, gbc, 0, "Nombre:", txtNombre = new JTextField(20));
 
-        // Stats con JSpinner (rango 1-10)
+        // Stats con JSpinner
         spVida      = new JSpinner(new SpinnerNumberModel(5, 1, 10, 1));
         spFuerza    = new JSpinner(new SpinnerNumberModel(5, 1, 10, 1));
         spVelocidad = new JSpinner(new SpinnerNumberModel(5, 1, 10, 1));

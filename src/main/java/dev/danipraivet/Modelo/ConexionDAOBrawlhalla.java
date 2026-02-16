@@ -16,9 +16,6 @@ public class ConexionDAOBrawlhalla {
     /** Contraseña de MySQL */
     private static final String PASSWORD = "usuario";
 
-    // ─────────────────────────────────────────────
-    //  CONEXIÓN
-    // ─────────────────────────────────────────────
 
     /**
      * Abre y devuelve una conexión a la base de datos
@@ -29,9 +26,6 @@ public class ConexionDAOBrawlhalla {
         return DriverManager.getConnection(URL, USER, PASSWORD);
     }
 
-    // ─────────────────────────────────────────────
-    //  ARMAS
-    // ─────────────────────────────────────────────
 
     /**
      * Obtiene la lista completa de armas
@@ -114,9 +108,6 @@ public class ConexionDAOBrawlhalla {
         }
     }
 
-    // ─────────────────────────────────────────────
-    //  LEYENDAS
-    // ─────────────────────────────────────────────
 
     /**
      * Obtiene la lista completa de leyendas (con sus dos armas resueltas)
@@ -244,9 +235,6 @@ public class ConexionDAOBrawlhalla {
         }
     }
 
-    // ─────────────────────────────────────────────
-    //  USUARIOS (login)
-    // ─────────────────────────────────────────────
 
     /**
      * Valida credenciales de acceso

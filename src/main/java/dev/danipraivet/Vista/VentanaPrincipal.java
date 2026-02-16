@@ -100,10 +100,6 @@ public class VentanaPrincipal extends JFrame {
         setJMenuBar(menuBar);
     }
 
-    // ─────────────────────────────────────────────
-    //  PANELES DE TABLA
-    // ─────────────────────────────────────────────
-
     private JPanel crearPanelLeyendas() {
         JPanel panel = new JPanel(new BorderLayout());
         String[] columnas = { "ID", "Nombre", "Vida", "Fuerza", "Velocidad", "Destreza", "Defensa", "Arma 1", "Arma 2" };
@@ -128,10 +124,6 @@ public class VentanaPrincipal extends JFrame {
         panel.add(new JScrollPane(tablaArmas), BorderLayout.CENTER);
         return panel;
     }
-
-    // ─────────────────────────────────────────────
-    //  CARGA DE DATOS
-    // ─────────────────────────────────────────────
 
     public void cargarDatosLeyendas() {
         DefaultTableModel modelo = (DefaultTableModel) tablaLeyendas.getModel();
@@ -161,9 +153,6 @@ public class VentanaPrincipal extends JFrame {
         }
     }
 
-    // ─────────────────────────────────────────────
-    //  ACCIONES
-    // ─────────────────────────────────────────────
 
     private void abrirVentanaAgregarLeyenda() {
         new VentanaAgregarLeyenda(this, controlador).setVisible(true);

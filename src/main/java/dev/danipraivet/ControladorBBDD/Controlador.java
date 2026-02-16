@@ -11,9 +11,6 @@ import java.util.List;
  */
 public class Controlador {
 
-    // ─────────────────────────────────────────────
-    //  LEYENDAS
-    // ─────────────────────────────────────────────
 
     /**
      * Obtiene la lista completa de leyendas
@@ -54,9 +51,6 @@ public class Controlador {
         return ConexionDAOBrawlhalla.eliminarLeyenda(idLeyenda);
     }
 
-    // ─────────────────────────────────────────────
-    //  ARMAS
-    // ─────────────────────────────────────────────
 
     /**
      * Obtiene la lista completa de armas
