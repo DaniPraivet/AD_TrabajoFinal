@@ -1,5 +1,6 @@
 package dev.danipraivet.Vista;
 
+import com.formdev.flatlaf.FlatDarculaLaf;
 import dev.danipraivet.Modelo.ConexionDAOBrawlhalla;
 
 import javax.swing.*;
@@ -64,8 +65,13 @@ public class VentanaLogin extends JFrame {
                 if (ConexionDAOBrawlhalla.validarUsuario(usuario, contrasena)) {
                     JOptionPane.showMessageDialog(VentanaLogin.this,
                             "¡Bienvenido!", "Login Exitoso", JOptionPane.INFORMATION_MESSAGE);
+                    try {
+                        UIManager.setLookAndFeel(new FlatDarculaLaf());
+                    } catch (Exception ex) {
+                        ex.printStackTrace();
+                    }
+                    SwingUtilities.invokeLater(() -> new VentanaPrincipal().setVisible(true));
                     dispose();
-                    new VentanaPrincipal().setVisible(true);
                 } else {
                     JOptionPane.showMessageDialog(VentanaLogin.this,
                             "Usuario o contraseña incorrectos", "Error de Login", JOptionPane.ERROR_MESSAGE);

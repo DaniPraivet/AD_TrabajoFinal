@@ -1,0 +1,40 @@
+[2026-02-16 19:19:57] [INFO] Intento de validación de usuario: admin
+[2026-02-16 19:19:57] [DEBUG] Intentando conectar a la base de datos
+[2026-02-16 19:19:58] [DEBUG] Conexión a BD establecida correctamente
+[2026-02-16 19:19:58] [INFO] Login exitoso - Usuario: admin
+[2026-02-16 19:19:59] [INFO] Obteniendo lista de leyendas
+[2026-02-16 19:19:59] [DEBUG] Intentando conectar a la base de datos
+[2026-02-16 19:19:59] [DEBUG] Conexión a BD establecida correctamente
+[2026-02-16 19:19:59] [INFO] Se obtuvieron 4 leyendas
+[2026-02-16 19:19:59] [INFO] Obteniendo lista de armas
+[2026-02-16 19:19:59] [DEBUG] Intentando conectar a la base de datos
+[2026-02-16 19:19:59] [DEBUG] Conexión a BD establecida correctamente
+[2026-02-16 19:19:59] [INFO] Se obtuvieron 13 armas
+[2026-02-16 19:27:42] [INFO] Insertando nueva arma: Chancla
+[2026-02-16 19:27:42] [DEBUG] Intentando conectar a la base de datos
+[2026-02-16 19:27:42] [DEBUG] Conexión a BD establecida correctamente
+[2026-02-16 19:27:42] [INFO] BD INSERT - Arma: ID: 14, Nombre: Chancla
+[2026-02-16 19:27:51] [INFO] Obteniendo lista de armas
+[2026-02-16 19:27:51] [DEBUG] Intentando conectar a la base de datos
+[2026-02-16 19:27:51] [DEBUG] Conexión a BD establecida correctamente
+[2026-02-16 19:27:51] [INFO] Se obtuvieron 14 armas
+[2026-02-16 19:36:08] [INFO] Intento de validación de usuario: admin
+[2026-02-16 19:36:08] [DEBUG] Intentando conectar a la base de datos
+[2026-02-16 19:36:08] [DEBUG] Conexión a BD establecida correctamente
+[2026-02-16 19:36:08] [INFO] Login exitoso - Usuario: admin
+[2026-02-16 19:36:09] [INFO] Obteniendo lista de leyendas
+[2026-02-16 19:36:09] [DEBUG] Intentando conectar a la base de datos
+[2026-02-16 19:36:09] [DEBUG] Conexión a BD establecida correctamente
+[2026-02-16 19:36:09] [INFO] Se obtuvieron 4 leyendas
+[2026-02-16 19:36:09] [INFO] Obteniendo lista de armas
+[2026-02-16 19:36:09] [DEBUG] Intentando conectar a la base de datos
+[2026-02-16 19:36:09] [DEBUG] Conexión a BD establecida correctamente
+[2026-02-16 19:36:09] [INFO] Se obtuvieron 14 armas
+[2026-02-16 19:36:40] [INFO] Eliminando arma con ID: 14
+[2026-02-16 19:36:40] [DEBUG] Intentando conectar a la base de datos
+[2026-02-16 19:36:40] [DEBUG] Conexión a BD establecida correctamente
+[2026-02-16 19:36:40] [INFO] BD DELETE - Arma: ID eliminado: 14
+[2026-02-16 19:36:40] [INFO] Obteniendo lista de armas
+[2026-02-16 19:36:40] [DEBUG] Intentando conectar a la base de datos
+[2026-02-16 19:36:40] [DEBUG] Conexión a BD establecida correctamente
+[2026-02-16 19:36:40] [INFO] Se obtuvieron 13 armas
